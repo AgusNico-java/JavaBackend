@@ -1,5 +1,6 @@
 package javabackend.entities;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -11,23 +12,23 @@ public class CreditCard {
     private String brand;
     private String number; //Despite it can be handled as a long int, the String class provides methods that will be helpfull for verification.
     private CardHolder cardHolder;
-    private Date expirityDate;
+    private Calendar expirityDate;
 
     public CreditCard() {
     }
 
-    public CreditCard(String brand, String number, CardHolder cardHolder, Date expirityDate) {
+    public CreditCard(String brand, String number, CardHolder cardHolder, Calendar expirityDate) {
         this.brand = brand;
         this.number = number;
         this.cardHolder = cardHolder;
         this.expirityDate = expirityDate;
     }
 
-    public Date getExpirityDate() {
+    public Calendar getExpirityDate() {
         return expirityDate;
     }
 
-    public void setExpirityDate(Date expirityDate) {
+    public void setExpirityDate(Calendar expirityDate) {
         this.expirityDate = expirityDate;
     }
 
@@ -62,7 +63,7 @@ public class CreditCard {
                 + "\nNumber: " + number 
                 + "\nName: " + cardHolder.getName() 
                 + "\nLast name: " + cardHolder.getLastName()
-                + "\nExpirity date: " + expirityDate;
+                + "\nExpirity date: " + expirityDate.get(Calendar.MONTH) + "/" + expirityDate.get(Calendar.YEAR);
     }
     
     
