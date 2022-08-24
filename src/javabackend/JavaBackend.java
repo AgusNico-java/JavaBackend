@@ -25,9 +25,9 @@ public class JavaBackend {
         
         //Creates 3 Date instances
         //Date date1 = new Date();
-        Calendar date1 = new GregorianCalendar(2023, 03, 18, 0, 0, 0);
-        Calendar date2 = new GregorianCalendar(2022, 07, 20, 0, 0, 0);
-        Calendar date3 = new GregorianCalendar(2025, 04, 25, 0, 0, 0);
+        Calendar date1 = new GregorianCalendar(2023, 03, 18);
+        Calendar date2 = new GregorianCalendar(2022, 07, 20);
+        Calendar date3 = new GregorianCalendar(2025, 04, 25);
         
         //Creates 3 CreditCard instances
         CreditCard credit1 = new CreditCard (VISA, "1234 5678 9101 1121", user1 , date1);
@@ -41,7 +41,9 @@ public class JavaBackend {
                 + "\n4. Identificar si una tarjeta es igual a otra(En base a su numero"
                 + "\n5. Obtener la tasa de una operación mediante su marca y el importe.)"
                 + "\n6. Salir");
+        
         int option = readInt.nextInt();
+        
         do {
             switch (option) {
             case 1:
