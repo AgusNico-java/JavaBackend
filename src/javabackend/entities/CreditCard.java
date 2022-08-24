@@ -60,8 +60,8 @@ public class CreditCard {
         return "Credit Card data:\n"
                 + "Brand: " + brand 
                 + "\nNumber: " + number 
-                + "\nCardHolder name: " + cardHolder.getName() 
-                + "\nCardHolder last name" + cardHolder.getLastName()
+                + "\nName: " + cardHolder.getName() 
+                + "\nLast name: " + cardHolder.getLastName()
                 + "\nExpirity date: " + expirityDate;
     }
     
