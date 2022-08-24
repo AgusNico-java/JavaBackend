@@ -1,7 +1,7 @@
 package javabackend.entities;
 
 import java.util.Calendar;
-import java.util.Date;
+import javabackend.enums.Brand;
 
 /**
  * This entity class will contain the attributes for the Credit Cards, as well as
@@ -9,7 +9,7 @@ import java.util.Date;
  * @author Nico
  */
 public class CreditCard {
-    private String brand;
+    private Brand brand;
     private String number; //Despite it can be handled as a long int, the String class provides methods that will be helpfull for verification.
     private CardHolder cardHolder;
     private Calendar expirityDate;
@@ -17,7 +17,7 @@ public class CreditCard {
     public CreditCard() {
     }
 
-    public CreditCard(String brand, String number, CardHolder cardHolder, Calendar expirityDate) {
+    public CreditCard(Brand brand, String number, CardHolder cardHolder, Calendar expirityDate) {
         this.brand = brand;
         this.number = number;
         this.cardHolder = cardHolder;
@@ -32,11 +32,11 @@ public class CreditCard {
         this.expirityDate = expirityDate;
     }
 
-        public String getBrand() {
+        public Brand getBrand() {
         return brand;
     }
 
-    public void setBrand(String brand) {
+    public void setBrand(Brand brand) {
         this.brand = brand;
     }
 
