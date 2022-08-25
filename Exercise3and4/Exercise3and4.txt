@@ -1,0 +1,6 @@
+Exercise 3 Answer:
+La consulta imprimirá 10 registros
+
+
+Exercise 4 Anser:
+De acuerdo con la función dada, lo cierto es que la misma se compilará.

@@ -16,7 +16,7 @@ public class CardService {
     Calendar date = new GregorianCalendar();
     final int DAY = date.get(Calendar.DAY_OF_MONTH);
     final int MONTH = date.get(Calendar.MONTH);
-    final int YEAR = date.get(Calendar.YEAR);
+    final int YEAR = 23;
     Scanner read = new Scanner(System.in);
     
     /**
@@ -82,10 +82,10 @@ public class CardService {
      */
     public boolean differentCards (CreditCard card1, CreditCard card2){
         if (card1.getNumber().equals(card2.getNumber())) {
-            System.out.println("The cards are the same.");
+            System.out.println("Las tarjetas son iguales.");
             return true;
         } else{
-            System.out.println("The cards are different.");
+            System.out.println("Las tarjetas son diferentes.");
             return false;
         }
     }
@@ -110,7 +110,7 @@ public class CardService {
     private float calculateRate(String brand){
         
         if (validBrand(brand)) {
-            switch (brand) {
+            switch (brand.toUpperCase()) {
             case "VISA":
                 return (YEAR/MONTH) * getVisaConstant();
             case "NARA":
@@ -135,7 +135,7 @@ public class CardService {
         
         float interval = (max - min) / 12;
         
-        float constant = min + (12 - (MONTH + 1) * interval);//La tasa es menor a medida que pasan los meses. Tiene su maximo en enero y su minimo en diciembre.
+        float constant = min + ((12 - (MONTH + 1)) * interval);//La tasa es menor a medida que pasan los meses. Tiene su maximo en enero y su minimo en diciembre.
         return constant;
     }
     
